@@ -3,6 +3,28 @@
 	<head>
 	</head>
 	<body>
+
+		<! -- Using conditional statements, if /else/ else if -- >
+
+		<p> Example 1 will display Good Morning! (before 11:00), Good Afternoon! (before 15:00) or Good Evening! </p>
+
+		<p id="example1"> Good Evening! </p>
+
+		<script>
+
+		var time = new Date().getHours();
+
+		if (time < 11)
+			{	document.getElementById("example1").innerHTML = "Good Morning!" ; 
+			}
+		else if ( time < 15)
+			{	document.getElementById("example1").innerHTML = "Good Afternoon!";
+			}	
+		else 
+			{	document.getElementById("example1").innerHTML = "Good Evening!";
+			}
+		</script>
+
 	</body>
 </html>
 	

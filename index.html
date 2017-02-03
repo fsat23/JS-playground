@@ -4,7 +4,7 @@
 	</head>
 	<body>
 
-		<! -- Using conditional statements, if /else/ else if -- >
+		<!-- Using conditional statements, if /else/ else if -->
 
 		<p> Example 1 will display Good Morning! (before 11:00), Good Afternoon! (before 15:00) or Good Evening! </p>
 
@@ -23,6 +23,42 @@
 		else 
 			{	document.getElementById("example1").innerHTML = "Good Evening!";
 			}
+		</script>
+
+		<p> Example 2 will display a message correlated to the month of the year it currently is. </p>
+
+		<p id="example2"> </p>
+
+		<script>
+
+		var month = new Date().getMonth();
+
+		switch (month) {
+			case 0:
+				month = "Happy January!";
+				break;
+			case 1:
+				month = "Happy February!";
+				break;
+			case 2:
+				month = "Happy March!";
+				break;
+			case 3:
+				month = "Happy April!";
+				break;
+			case 4:
+				month = "Happy May!";
+				break;
+			case 5:
+				month = "Happy June!";
+				break;
+			default:
+				month = "Second half of the year already!";
+				break;
+		}
+
+		document.getElementById("example2").innerHTML = month;
+
 		</script>
 
 	</body>

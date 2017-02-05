@@ -74,9 +74,14 @@
 
 
 			obj = JSON.parse(text);
-			document.getElementById("example3").innerHTML = 
-			obj.users[0].firstName + " " + obj.users[0].lastName;
-			
+			// document.getElementById("example3").innerHTML = obj.users[0].firstName + " " + obj.users[0].lastName;
+
+			var x = 0
+			for (x; x < 3; x ++) {
+				document.getElementById("example3").innerHTML += obj.users[x].firstName + " " + obj.users[x].lastName + "<br>";	
+			}
+
+
 
 		</script>
 

@@ -61,6 +61,25 @@
 
 		</script>
 
+		<p> Example 3 will display individuals First name, last name and age.</p>
+
+		<p id = "example3"> </p>
+
+		<script>
+
+			var text = ' { "users" :[' + 
+			'{"firstName":"Farasat","lastName":"Siddiqui"},' +
+			'{"firstName":"Wajahat","lastName":"Siddiqui"},' +
+			'{"firstName":"Talha","lastName":"Baig" }]}';
+
+
+			obj = JSON.parse(text);
+			document.getElementById("example3").innerHTML = 
+			obj.users[0].firstName + " " + obj.users[0].lastName;
+			
+
+		</script>
+
 	</body>
 </html>
 	

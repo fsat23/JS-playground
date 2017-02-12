@@ -25,6 +25,8 @@
 			}
 		</script>
 
+		<!-- Using switch statement --> 
+
 		<p> Example 2 will display a message correlated to the month of the year it currently is. </p>
 
 		<p id="example2"> </p>
@@ -67,22 +69,54 @@
 
 		<script>
 
-			var text = ' { "users" :[' + 
-			'{"firstName":"Farasat","lastName":"Siddiqui"},' +
-			'{"firstName":"Wajahat","lastName":"Siddiqui"},' +
-			'{"firstName":"Talha","lastName":"Baig" }]}';
+			var text = '[' + 
+			'{"firstName":"Farasat","lastName":"Siddiqui", "age":"23"},' +
+			'{"firstName":"Wajahat","lastName":"Siddiqui","age":"25"},' +
+			'{"firstName":"Talha","lastName":"Baig","age":"25"}]';
 
 
-			obj = JSON.parse(text);
+			users = JSON.parse(text);
 
-			var x = 0
-			for (x; x < 3; x ++) {
-				document.getElementById("example3").innerHTML += obj.users[x].firstName + " " + obj.users[x].lastName + "<br>";
+			
+			for (var i = 0; i < 3; i++) {
+				document.getElementById("example3").innerHTML += users[i].firstName + " " + users[i].lastName + " is " + users[i].age + "." + "<br>";
 				
 			}
 
 		</script>
 
+		<!-- Using if/else -->
+
+		<script>
+
+	function verticalFullName()
+	{
+		var fullname = document.getElementById("fullname").value;
+		if(fullname == "") {
+			document.getElementById("output").innerHTML = "Please input a name.";
+		}
+		else {
+
+			var i = 0;
+			while (i < fullname.length) {
+				document.getElementById("output").innerHTML += fullname[i] + "<br>"; i++;
+			}
+		}
+	}
+	</script>
+
+
+<body>
+
+<p> Example 4 will convert a full name into vertical text using a if/ else function when the button is pushed. </p>
+
+	
+Full Name:<input id ="fullname" type="text" />
+<button onclick ="verticalFullName()">Show Me </button>
+
+<p id="output"> </p>
+
 	</body>
+
 </html>
 	
